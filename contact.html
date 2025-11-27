@@ -33,7 +33,7 @@
            <h1 class="section-title">Contact Us</h1>
 
 <div class="contact-form">
-  <!-- JS will build a proper mailto: link so the email client opens with a full message -->
+
   <form id="contactForm">
     <div class="form-group">
       <input id="name" type="text" name="Name" placeholder="Your Name" required>
@@ -59,18 +59,18 @@
 
 <script>
 document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault(); // stop normal form submission
+  e.preventDefault(); 
 
-  // Collect values
+
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const message = document.getElementById('message').value.trim();
 
-  // Build email subject and body (encode URI components)
+ 
   const to = 'Royaalcoats2012@gmail.com';
   const subject = encodeURIComponent('Website Contact Form Inquiry');
-  // Use CRLF for newlines in mailto
+
   const bodyLines = [
     `Name: ${name}`,
     `Email: ${email}`,
@@ -81,41 +81,60 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
   ];
   const body = encodeURIComponent(bodyLines.join('\r\n'));
 
-  // Create mailto link
+
   const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
 
-  // Open default mail client
+  
   window.location.href = mailtoLink;
 
-  // Optional: show a small in-page notice (since mail client opens in a new app or tab)
-  // You can uncomment next lines to show a quick alert
-  // alert('Your email client should open. Please review the message and click Send.');
+  
 });
 </script>
 
 
-           <div style="text-align: center; margin-top: 3rem;">
-  <h3>
-    <a href="https://www.google.com/maps?q=18/2A,+Jaganatha+Industrial+Area,+Behind+CRI+Pumps,+Ganapathi,+Chinnavedampatti,+Coimbatore,+Tamil+Nadu+641049"
-       target="_blank"
-       style="text-decoration: none; color: #0b63a5;">
-        <i class="fas fa-map-marker-alt" style="margin-right: 8px; color: #e63946;"></i>
-        Visit Us
-    </a>
-</h3>
-
-<p>18/2A, Jaganatha Industrial Area, Behind CRI Pumps, Ganapathi, Chinnavedampatti,</p>
-<p>Coimbatore, Tamil Nadu 641049</p>
-
-<p>Email: <a href="mailto:Royaalcoats2012@gmail.com">Royaalcoats2012@gmail.com</a></p>
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;">
 
 
-    <div style="margin-top: 1.5rem;">
-        <a href="tel:+917708072382" style="font-size: 1.2rem; text-decoration: none; color: #0b63a5;">
+    <div style="flex: 1; min-width: 280px; text-align: left;">
+        <h3>
+            <a href="https://maps.app.goo.gl/gxhJAp5aPhEAn9q26"
+               style="text-decoration: none; color: #0b63a5;">
+                📍 Visit Us
+            </a>
+        </h3>
+
+        <p>Royaal Coats<br>
+		18/2A, Jaganatha Industrial Area,<br>
+        Behind CRI Pumps, Ganapathi,<br>
+        Chinnavedampatti, Coimbatore,<br>
+        Tamil Nadu 641049</p>
+
+        <p>Email: <a href="mailto:Royaalcoats2012@gmail.com">Royaalcoats2012@gmail.com</a></p><br>
+		 <a href="tel:+917708072382" style="font-size: 1.2rem; text-decoration: none; color: #0b63a5;">
             <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Call Us: 7708072382
-        </a>
+        </a></p>
     </div>
+
+
+    <div style="flex: 1; min-width: 300px;">
+        <div style="position: relative; width: 100%; padding-bottom: 60%; height: 0; overflow: hidden; border-radius: 12px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.77750426994!2d76.98505547588574!3d11.05530125398619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8f7dfc6263d6f%3A0x55519fb27f66fd11!2sRoyaal%20Coats!5e0!3m2!1sen!2sin!4v1764238536313!5m2!1sen!2sin"
+                style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;"
+                loading="lazy"
+                allowfullscreen=""
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
 </div>
+
+
+
+
+
+  
         </section>
     </main>
 
